@@ -4,9 +4,15 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] arg) {
+        //calculate until the "exit" is intercepted on input
+        System.out.println("Enter two arabian or rome numbers with operator /, *, - or +:");
         Scanner inputConsole = new Scanner(System.in);
         String consoleInput = inputConsole.nextLine().replaceAll("\\s+", "");
-        System.out.println(calc(consoleInput));
+        while (!consoleInput.equals("exit")) {
+            System.out.println(calc(consoleInput));
+            System.out.println("Enter two arabian or rome numbers with operator /, *, - or +:");
+            consoleInput = inputConsole.nextLine().replaceAll("\\s+", "");
+        }
         inputConsole.close();
     }
     public static String calc(String input) {
