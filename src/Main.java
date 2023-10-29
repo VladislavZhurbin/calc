@@ -7,7 +7,7 @@ public class Main {
         //calculate until the "exit" is intercepted on input
         Scanner inputConsole = new Scanner(System.in);
         String consoleInput = inputConsole.nextLine().replaceAll("\\s+", "");
-        while (consoleInput.equals("exit") != true) {
+        while (!consoleInput.equals("exit")) {
             System.out.println(calc(consoleInput));
             consoleInput = inputConsole.nextLine().replaceAll("\\s+", "");
         }
