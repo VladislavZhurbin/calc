@@ -4,13 +4,9 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] arg) {
-        //calculate until the "exit" is intercepted on input
         Scanner inputConsole = new Scanner(System.in);
         String consoleInput = inputConsole.nextLine().replaceAll("\\s+", "");
-        while (!consoleInput.equals("exit")) {
-            System.out.println(calc(consoleInput));
-            consoleInput = inputConsole.nextLine().replaceAll("\\s+", "");
-        }
+        System.out.println(calc(consoleInput));
         inputConsole.close();
     }
     public static String calc(String input) {
